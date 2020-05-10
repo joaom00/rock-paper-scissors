@@ -1,0 +1,194 @@
+@media (max-width: 768px) {
+  .pentagon {
+    top: 45%;
+    width: 250px;
+  }
+
+  .score-container {
+    max-width: 330px;
+    padding: 10px 10px;
+    border: solid 3px hsl(217, 16%, 45%);
+  }
+
+  .score-container img {
+    width: 85px;
+  }
+
+  .score-box {
+    width: 80px;
+    height: 73px;
+    align-items: center;
+    border-radius: 5px;
+  }
+
+  .score-box h2 {
+    font-size: 0.625rem;
+  }
+
+  .score-box .score-bonus {
+    font-size: 2.1875rem;
+  }
+
+  .score-box .icon-reset {
+    width: 15px;
+    height: 15px;
+    bottom: 5px;
+    right: 5px;
+  }
+
+  .container-before {
+    margin-top: 100px;
+  }
+
+  .game-container {
+    width: 314px;
+    height: 306px;
+    grid-template-rows: 35px 130px 140px;
+    column-gap: 55px;
+  }
+
+  .circle {
+    width: 98px;
+    height: 98px;
+  }
+
+  .circle::after {
+    width: 74px;
+    height: 74px;
+  }
+
+  .paper img {
+    width: 35px;
+    height: 41px;
+  }
+
+  .btn-paper {
+    justify-self: end;
+  }
+
+  .scissors img {
+    width: 34px;
+    height: 39px;
+  }
+
+  .rock img {
+    width: 31px;
+    height: 31px;
+  }
+
+  .spock img {
+    width: 29px;
+    height: 39px;
+  }
+
+  .btn-spock {
+    justify-self: start;
+  }
+
+  .lizard img {
+    width: 45px;
+    height: 43px;
+  }
+
+  .rules-container {
+    padding: 20px 40px;
+  }
+
+  .rules-container .header h2 {
+    font-size: 1.5rem;
+  }
+
+  .image-rules img {
+    width: 250px;
+  }
+
+  .game-container-2 {
+    width: 360px;
+    height: 325px;
+    display: grid;
+    grid-template-areas: 'userPicked housePicked' 'middle middle';
+    row-gap: 100px;
+  }
+
+  .game-container-2 .youPicked {
+    grid-area: userPicked;
+    margin-left: 15px;
+  }
+
+  .game-container-2 .middle {
+    grid-area: middle;
+  }
+
+  .game-container-2 .housePicked {
+    grid-area: housePicked;
+    margin-right: 15px;
+  }
+
+  .picked {
+    flex-direction: column-reverse;
+    margin-top: 40px;
+  }
+
+  .picked .circle {
+    width: 138px;
+    height: 138px;
+  }
+
+  .picked .circle::after {
+    width: 104px;
+    height: 104px;
+  }
+
+  .picked .circle img {
+    width: 49px;
+    height: 58px;
+  }
+
+  .picked h2 {
+    font-size: 0.875rem;
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
+
+  .middle h2 {
+    font-size: 3.5rem;
+  }
+
+  .play-again {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-height: 667px) {
+  .pentagon {
+    top: 52%;
+  }
+
+  .game-container {
+    grid-template-rows: 0px 130px 140px;
+  }
+
+  .container-after {
+    margin-top: 0;
+  }
+
+  .picked {
+    margin-top: 20px;
+  }
+
+  .picked h2 {
+    margin-top: 20px;
+  }
+
+  .middle h2 {
+    font-size: 2.5rem;
+  }
+
+  .play-again {
+    padding: 15px 35px;
+  }
+
+  .game-container-2 {
+    row-gap: 70px;
+  }
+}

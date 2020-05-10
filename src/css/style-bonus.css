@@ -1,0 +1,454 @@
+/* RESET STYLES START */
+*,
+p,
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  height: 100vh;
+  overflow: hidden;
+  font-size: 16px;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+/* RESET STYLES END */
+
+/* HEADER STYLES START */
+
+.score-container {
+  max-width: 700px;
+  border: solid 1px hsl(217, 16%, 45%);
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  border-radius: 10px;
+}
+
+.score-box {
+  background: white;
+  padding: 11px 40px;
+  text-align: center;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 10px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.score-box h2 {
+  color: hsl(229, 64%, 46%);
+  font-weight: 600;
+  font-size: 1.125rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.score-box .score-bonus {
+  font-size: 4rem;
+  color: hsl(229, 25%, 31%);
+  font-weight: 700;
+}
+
+.score-box .icon-reset {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.score-box .icon-reset path {
+  transition: all 0.3s;
+}
+
+.score-box .icon-reset:hover path {
+  fill: #000000;
+}
+
+/* HEADER STYLES END */
+
+/* GAME CONTENT ONE STYLES START */
+
+.pentagon {
+  position: absolute;
+  top: 61%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 429px;
+}
+
+.game-container {
+  margin: 40px auto;
+  width: 600px;
+  height: 460px;
+  display: grid;
+  grid-template-areas: 'scissors scissors' 'spock paper' 'lizard rock';
+  grid-template-rows: 80px 160px 280px;
+  column-gap: 110px;
+}
+
+.circle {
+  background-color: white;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+.circle::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 113px;
+  height: 113px;
+  background-color: white;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: inset 0px 10px 3px rgba(142, 142, 142, 0.4);
+}
+
+.circle:hover::after {
+  background-color: #dedede;
+}
+
+.paper {
+  background: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+  box-shadow: inset 0px -9px 0px rgba(0, 0, 0, 0.25);
+}
+
+.paper img {
+  position: absolute;
+  width: 53px;
+  height: 63px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+.btn-paper {
+  justify-self: center;
+  align-self: center;
+  grid-area: paper;
+}
+
+.scissors {
+  background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+  box-shadow: inset 0px -9px 0px rgba(0, 0, 0, 0.25);
+}
+
+.scissors img {
+  position: absolute;
+  width: 52px;
+  height: 60px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+.btn-scissors {
+  justify-self: center;
+  align-self: center;
+  grid-area: scissors;
+}
+
+.rock {
+  background: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+  box-shadow: inset 0px -9px 0px rgba(0, 0, 0, 0.25);
+}
+
+.rock img {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+.btn-rock {
+  grid-area: rock;
+  justify-self: start;
+  align-self: center;
+}
+
+.lizard {
+  background: linear-gradient(hsl(261, 73%, 60%), hsl(261, 72%, 63%));
+  box-shadow: inset 0px -9px 0px rgba(0, 0, 0, 0.25);
+}
+
+.lizard img {
+  position: absolute;
+  width: 69px;
+  height: 66px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+.btn-lizard {
+  justify-self: end;
+  align-self: center;
+  grid-area: lizard;
+}
+
+.spock {
+  background: linear-gradient(hsl(189, 59%, 53%), hsl(189, 58%, 57%));
+  box-shadow: inset 0px -9px 0px rgba(0, 0, 0, 0.25);
+}
+
+.spock img {
+  position: absolute;
+  width: 45px;
+  height: 59px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+.btn-spock {
+  justify-self: center;
+  align-self: center;
+  grid-area: spock;
+}
+
+.rules {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 40px;
+  background: none;
+  outline: none;
+  border: solid 1px white;
+  border-radius: 5px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  cursor: pointer;
+  z-index: 999;
+  transition: all 0.4s;
+}
+
+.rules:hover {
+  background: white;
+  color: black;
+}
+
+.rules-modal {
+  z-index: 9999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.rules-container {
+  background-color: white;
+  padding: 30px 50px;
+  border-radius: 10px;
+}
+
+.rules-container .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.rules-container .header h2 {
+  color: hsl(229, 25%, 31%);
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.rules-container .header img {
+  cursor: pointer;
+}
+
+.rules-modal.activeModal {
+  display: flex;
+}
+
+.back {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  padding: 5px 30px;
+  background: none;
+  outline: none;
+  border: solid 1px white;
+  border-radius: 5px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  cursor: pointer;
+  z-index: 999;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: all 0.4s;
+}
+
+.back svg {
+  margin-right: 10px;
+}
+
+.back:hover {
+  background: white;
+  color: black;
+}
+
+.back:hover path {
+  fill: black;
+}
+
+/* GAME CONTENT ONE STYLES END */
+
+/* GAME CONTENT TWO STYLES START */
+
+.container-after {
+  margin-top: 50px;
+  transform: translate3d(0, -30px, 0);
+  opacity: 0;
+}
+
+.game-container-2 {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.picked {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.picked h2 {
+  margin-bottom: 50px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 9px 9px 16px rgba(0, 0, 0, 0.5);
+  font-size: 2rem;
+}
+
+.picked .circle {
+  width: 304px;
+  height: 304px;
+}
+
+.picked .circle::after {
+  width: 229px;
+  height: 229px;
+}
+
+.picked .circle img {
+  width: 123px;
+  height: 147px;
+}
+
+.middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translate3d(0, -30px, 0);
+  opacity: 0;
+}
+
+.middle h2 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 4rem;
+  text-shadow: 9px 9px 16px rgba(0, 0, 0, 0.5);
+}
+
+.play-again {
+  padding: 15px 55px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  letter-spacing: 3px;
+  color: hsl(229, 25%, 31%);
+  font-weight: 700;
+  margin-top: 10px;
+  cursor: pointer;
+  background: white;
+  transition: all 0.4s;
+}
+
+.play-again:hover {
+  transform: scale(1.1);
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* GAME CONTENT ONE STYLES END */
+
+/* TRANSITIONS STYLES START */
+
+.fadeOut {
+  transform: translate3d(0, 30px, 0);
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+
+.fadeOut2 {
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+.fadeIn {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+  transition: all 0.4s ease-in-out;
+}
+
+.fadeIn2 {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.4s ease-in-out;
+}
+
+.fadeIn3 {
+  opacity: 1;
+  transition: all 0.4s ease-in-out;
+}
+
+.displayNone {
+  display: none;
+}
+
+/* TRANSITIONS STYLES END */

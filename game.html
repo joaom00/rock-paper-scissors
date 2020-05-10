@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" type="text/css" href="./src/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./src/css/responsive.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- HEADER START -->
+    <div class="score-container">
+      <img src="./images/logo.svg" alt="Rock, Paper, Scissors" />
+      <div class="score-box">
+        <h2>Score</h2>
+        <p class="score"></p>
+        <svg
+          class="icon-reset"
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+        >
+          <path
+            d="M11.25 17.5C12.7334 17.5 14.1834 17.0601 15.4168 16.236C16.6501 15.4119 17.6114 14.2406 18.1791 12.8701C18.7468 11.4997 18.8953 9.99168 18.6059 8.53682C18.3165 7.08196 17.6022 5.74559 16.5533 4.6967C15.5044 3.6478 14.168 2.9335 12.7132 2.64411C11.2583 2.35472 9.75032 2.50325 8.37987 3.0709C7.00943 3.63856 5.83809 4.59985 5.01398 5.83322C4.18987 7.06659 3.75 8.51664 3.75 10V13.875L1.5 11.625L0.625 12.5L4.375 16.25L8.125 12.5L7.25 11.625L5 13.875V10C5 8.76387 5.36656 7.55549 6.05331 6.52769C6.74007 5.49988 7.71619 4.6988 8.85823 4.22575C10.0003 3.7527 11.2569 3.62893 12.4693 3.87009C13.6817 4.11125 14.7953 4.7065 15.6694 5.58058C16.5435 6.45466 17.1388 7.5683 17.3799 8.78069C17.6211 9.99307 17.4973 11.2497 17.0242 12.3918C16.5512 13.5338 15.7501 14.5099 14.7223 15.1967C13.6945 15.8834 12.4861 16.25 11.25 16.25V17.5Z"
+            fill="#BDBDBD"
+          />
+        </svg>
+      </div>
+    </div>
+    <!-- HEADER END -->
+
+    <!-- GAME CONTENT ONE START-->
+    <div class="container-before" data-containerBefore>
+      <div class="game-container">
+        <button class="btn-paper" onclick="game(this.value)" value="paper">
+          <div class="circle paper" data-circle>
+            <img src="./images/icon-paper.svg" alt="Paper" />
+          </div>
+        </button>
+        <button
+          class="btn-scissors"
+          onclick="game(this.value)"
+          value="scissors"
+        >
+          <div class="circle scissors" data-circle>
+            <img src="./images/icon-scissors.svg" alt="Scissors" />
+          </div>
+        </button>
+        <button class="btn-rock" onclick="game(this.value)" value="rock">
+          <div class="circle rock" data-circle>
+            <img src="./images/icon-rock.svg" alt="Rock" />
+          </div>
+        </button>
+      </div>
+    </div>
+    <button class="rules">Rules</button>
+    <a class="bonus-game" href="./bonus-game.html">Bonus Game</a>
+    <!-- GAME CONTENT ONE END-->
+
+    <!-- GAME CONTENT TWO START-->
+    <div class="container-after" data-containerAfter>
+      <div class="game-container-2">
+        <div class="picked youPicked">
+          <h2>You Picked</h2>
+          <div id="userPicked" class="circle"></div>
+        </div>
+        <div class="middle">
+          <h2 class="who"></h2>
+          <button class="play-again">Play Again</button>
+        </div>
+        <div class="picked housePicked">
+          <h2>The House Picked</h2>
+          <div id="housePicked" class="circle house-picked"></div>
+        </div>
+      </div>
+    </div>
+    <!-- GAME CONTENT TWO END-->
+
+    <!-- RULES MODAL START-->
+    <div class="rules-modal">
+      <div class="rules-container">
+        <div class="header">
+          <h2>Rules</h2>
+          <img src="./images/icon-close.svg" alt="Close" />
+        </div>
+        <div class="image-rules">
+          <img src="./images/image-rules.svg" alt="Rules" />
+        </div>
+      </div>
+    </div>
+    <!-- RULES MODAL END-->
+
+    <script src="./src/js/game.js"></script>
+  </body>
+</html>
