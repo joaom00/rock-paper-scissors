@@ -70,6 +70,7 @@ button {
   bottom: 10px;
   right: 10px;
   cursor: pointer;
+  stroke: #bdbdbd;
 }
 
 .score-box .icon-reset path {
@@ -77,7 +78,7 @@ button {
 }
 
 .score-box .icon-reset:hover path {
-  fill: #000000;
+  stroke: #000000;
 }
 
 /* HEADER STYLES END */
@@ -131,7 +132,7 @@ button {
 
 .paper {
   background: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
-  box-shadow: inset 0px -9px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0px -7px 0px rgba(0, 0, 0, 0.25);
 }
 
 .paper img {
@@ -152,7 +153,7 @@ button {
 
 .scissors {
   background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
-  box-shadow: inset 0px -9px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0px -7px 0px rgba(0, 0, 0, 0.25);
 }
 
 .scissors img {
@@ -173,7 +174,7 @@ button {
 
 .rock {
   background: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
-  box-shadow: inset 0px -9px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0px -7px 0px rgba(0, 0, 0, 0.25);
 }
 
 .rock img {
@@ -194,7 +195,7 @@ button {
 
 .lizard {
   background: linear-gradient(hsl(261, 73%, 60%), hsl(261, 72%, 63%));
-  box-shadow: inset 0px -9px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0px -7px 0px rgba(0, 0, 0, 0.25);
 }
 
 .lizard img {
@@ -215,7 +216,7 @@ button {
 
 .spock {
   background: linear-gradient(hsl(189, 59%, 53%), hsl(189, 58%, 57%));
-  box-shadow: inset 0px -9px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0px -7px 0px rgba(0, 0, 0, 0.25);
 }
 
 .spock img {
@@ -274,6 +275,7 @@ button {
   background-color: white;
   padding: 30px 50px;
   border-radius: 10px;
+  animation: fadeIn 0.3s forwards;
 }
 
 .rules-container .header {
@@ -449,6 +451,17 @@ button {
 
 .displayNone {
   display: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -30px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 /* TRANSITIONS STYLES END */

@@ -57,6 +57,10 @@
     height: 74px;
   }
 
+  .paper {
+    box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.25);
+  }
+
   .paper img {
     width: 35px;
     height: 41px;
@@ -66,14 +70,26 @@
     justify-self: end;
   }
 
+  .scissors {
+    box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.25);
+  }
+
   .scissors img {
     width: 34px;
     height: 39px;
   }
 
+  .rock {
+    box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.25);
+  }
+
   .rock img {
     width: 31px;
     height: 31px;
+  }
+
+  .spock {
+    box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.25);
   }
 
   .spock img {
@@ -83,6 +99,10 @@
 
   .btn-spock {
     justify-self: start;
+  }
+
+  .lizard {
+    box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.25);
   }
 
   .lizard img {

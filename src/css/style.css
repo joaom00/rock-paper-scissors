@@ -71,6 +71,7 @@ button {
   bottom: 10px;
   right: 10px;
   cursor: pointer;
+  stroke: #bdbdbd;
 }
 
 .score-box .icon-reset path {
@@ -78,7 +79,7 @@ button {
 }
 
 .score-box .icon-reset:hover path {
-  fill: #000000;
+  stroke: #000000;
 }
 
 /* HEADER STYLES END */
@@ -224,6 +225,7 @@ button {
   background-color: white;
   padding: 30px 50px;
   border-radius: 10px;
+  animation: fadeIn 0.3s forwards;
 }
 
 .rules-container .header {
@@ -384,6 +386,17 @@ button {
 
 .displayNone {
   display: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -30px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 /* TRANSITIONS STYLES END */
