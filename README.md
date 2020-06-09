@@ -6,7 +6,7 @@
 
 ## Bem-vindo! 👋
 
-### [Veja o Site Aqui!](https://joaopedro202.github.io/rock-paper-scissors/game.html)
+### [Veja o Site Aqui!](https://joaom00.github.io/rock-paper-scissors/game.html)
 
 ---
 
