@@ -20,9 +20,9 @@ Desafio do site Frontend Mentor, onde eu tive que criar o clássico jogo pedra, 
 
 ---
 
-## Bonus Game
+## Bônus Game
 
-Outra parte do desafio era criar um Bonus Game chamado Pedra, Papel, Tesoura, Lagarto e Spock
+Outra parte do desafio era criar um Bônus Game chamado Pedra, Papel, Tesoura, Lagarto e Spock
 
 Se você não sabe do que estou falando, confira neste [vídeo](https://www.youtube.com/watch?v=OtzekNVWs30).
 
